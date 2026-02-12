@@ -15,22 +15,22 @@ Aplicación interactiva desarrollada con Streamlit que permite:
 
 ## 📸 Capturas de la App
     ### 🔹 Vista Principal
-    ![Vista principal](images/app_home.png)
+   ![Vista principal](images/app_home.png)
 
     ### 🔹 Resultado de Predicción
-    ![Resultado](images/prediction.png)
+   ![Resultado](images/prediction.png)
 
     ### 🔹 Dashboard de KPIs
-    ![KPIs](images/kpis.png)
+   ![KPIs](images/kpis.png)
 
     ### 🔹 Histórico de Predicciones
-    ![Histórico](images/history_table.png)
+   ![Histórico](images/history_table.png)
 
     ### 🔹 Distribución de Predicciones
-    ![Distribución](images/dist_predictions.png)
+   ![Distribución](images/dist_predictions.png)
 
     ### 🔹 Factores que Influencian
-    ![Importancia de características](images/feature_importance.png)
+   ![Importancia de características](images/feature_importance.png)
 
 
 ## 🧠 Objetivos del Proyecto
@@ -58,23 +58,7 @@ Construir un sistema predictivo que permita:
 * Joblib
 
 ## 📁 Estructura de archivos
-Challenge Telecom-X-Churn-Prediction/
-│
-├── app/
-│   ├── streamlit_app.py
-│   ├── modelo_churn.pkl
-│   └── feature_importance.csv
-│
-├── data/
-│   └── telecom_churn_ml_preparado.csv
-│
-├── notebooks/
-│   └── 01_EDA_Preprocesamiento.ipynb
-│   └── 02_Modelado_y_Evaluacion.ipynb
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
+![Estructura de archivos](images/structure.png)
 
 ## 🧪 Validación del Modelo
 Para asegurar que el modelo se encuentre correctamente entrenado y generalice adecuadamente, se realizaron las siguientes validaciones:
