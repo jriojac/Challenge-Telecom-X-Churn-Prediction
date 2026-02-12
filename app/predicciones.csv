@@ -1,6 +1,4 @@
 fecha,tenure_meses,cargo_mensual,fibra,contrato,soporte,resultado,rango_cargo
-2026-02-11 17:55:35.468797,0,120,No,Month-to-month,No,Cliente Probablemente Permanecerá,100+
-2026-02-11 17:55:42.162621,0,120,Sí,Month-to-month,No,Cliente en Riesgo de Cancelación,100+
-2026-02-11 17:56:29.819116,10,120,Sí,One year,Sí,Cliente Probablemente Permanecerá,100+
-2026-02-11 17:57:50.912996,6,73,Sí,Month-to-month,No,Cliente en Riesgo de Cancelación,61-80
-2026-02-11 19:17:57.629936,11,88,Sí,Month-to-month,No,Cliente en Riesgo de Cancelación
+2026-02-11 20:58:02.964753,1.0,51,No,Month-to-month,No,Cliente Probablemente Permanecerá
+2026-02-11 21:02:48.149729,0.09,1.0,Sí,Month-to-month,No,Cliente en Riesgo de Cancelación
+2026-02-11 21:07:36.603838,0.2,0.5,No,Month-to-month,No,Cliente Probablemente Permanecerá

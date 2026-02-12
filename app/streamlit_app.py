@@ -5,30 +5,31 @@ import os
 import datetime
 
 
-st.set_page_config(page_title="Telecom Churn Predictor")
+st.set_page_config(page_title="Telecom X Churn Predictor")
 
 st.title("📊 Telecom X Churn Prediction")
-
-
-
-
-
-
 
 #st.write("Ingrese la información del cliente:")
 
 st.info("Complete la información del cliente para estimar el riesgo de cancelación.")
 # Inputs principales
 
+
 #En lugar que sea 0 y 1 cambiamos a meses
-#tenure = st.slider("Antigüedad (Tenure)", 0.0, 1.0) 
-tenure_months = st.slider("Antigüedad del cliente (meses)", 0, 72)
-tenure = tenure_months / 72
+#0  → cliente muy nuevo | 1  → cliente muy antiguo
+
+tenure = st.slider(" Antigüedad (Tenure) [0  → cliente muy nuevo | 1  → cliente muy antiguo]", 0.0, 1.0) 
+
+#tenure_months = st.slider("Antigüedad del cliente (meses) / (Tenure: 0-1) ", 0, 72)
+#tenure = tenure_months / 72
 
 #Mostrar dólares reales para cargo mensual
-#charges = st.slider("Cargo Mensual", 0.0, 1.0)
-monthly_charge = st.slider("Cargo mensual ($)", 20, 120)
-charges = (monthly_charge - 20) / (120 - 20)
+#0 → cargo bajo | 1 → cargo alto
+
+charges = st.slider(" Cargo Mensual [0 → cargo bajo | 1 → cargo alto] ", 0.0, 1.0)
+
+#monthly_charge = st.slider("Cargo mensual ($) / (Tenure: 0-1) ", 20, 120)
+#charges = (monthly_charge - 20) / (120 - 20)
 
 
 
@@ -125,8 +126,10 @@ if st.button("Predecir"):
 
     log = {
         "fecha": datetime.datetime.now(),
-        "tenure_meses": tenure_months,
-        "cargo_mensual": monthly_charge,
+        "tenure": tenure,
+        #"tenure_meses": tenure_months,
+        "cargo_mensual": charges,
+        #"cargo_mensual": monthly_charge,
         "fibra": fiber,
         "contrato": contract,
         "soporte": tech_support,
@@ -158,13 +161,12 @@ if os.path.exists("predicciones.csv"):
 #Histograma de cargos
 st.subheader("Distribución de Cargos Mensuales")
 
+# por temas de visualización se cambio por rangos.
 #st.bar_chart(hist["cargo_mensual"].value_counts(bins=10))
 
 bins = [0, 20, 40, 60, 80, 100, 150]
 labels = ["0-20", "21-40", "41-60", "61-80", "81-100", "100+"]
-
 hist["rango_cargo"] = pd.cut(hist["cargo_mensual"], bins=bins, labels=labels)
-
 st.bar_chart(hist["rango_cargo"].value_counts())
 
 
